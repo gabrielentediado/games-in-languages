@@ -3,6 +3,8 @@
 #include <random>
 using namespace std;
 
+void return_menu();
+
 class Operations {       
   public:
     int difficult;
@@ -28,6 +30,7 @@ class Operations {
       string result = resultado_func(result_user, resultado);
       
       cout << result << endl;
+      return_menu();
     }
     void mult(){
       generate_numbers();
@@ -40,6 +43,7 @@ class Operations {
       string result = resultado_func(result_user, resultado);
       
       cout << result << endl;
+      return_menu();
     }
     void sub(){
       generate_numbers();
@@ -52,6 +56,7 @@ class Operations {
       string result = resultado_func(result_user, resultado);
       
       cout << result << endl;
+      return_menu();
     }
     void div(){
       generate_numbers();
@@ -64,9 +69,10 @@ class Operations {
       string result = resultado_func(result_user, resultado);
       
       cout << result << endl;
+      return_menu();
     }
     string resultado_func(int result_user, int resultado){
-      string resultado_soma = (result_user == resultado) ? "acertou" : "errou";  
+      string resultado_soma = (result_user == resultado) ? "Nice! got it right" : "Wrong, good try, lets try again!";  
       return resultado_soma;
     }
     Operations(int mode){
@@ -85,6 +91,10 @@ class Operations {
         mode = 1000; 
         difficult = mode;
         cout << "range to 0" << difficult <<  endl;
+        break;
+        default:
+        cout << "ERROR - 404: invalid gamemode" <<  endl;
+        return_menu();
         break;
       }
     }
@@ -109,6 +119,14 @@ int main(void) {
     break;
     case 4:
     op_Objt.mult();
+    break;
+    default:
+    cout << "ERROR - 404: invalid operation" <<  endl;
+    main();
     break;    
   }
 } 
+
+void return_menu(){
+  main();
+}
