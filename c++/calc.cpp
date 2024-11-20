@@ -80,17 +80,17 @@ class Operations {
         case 1:
         mode = 10; 
         difficult = mode;
-        cout << "range to 0" << difficult <<  endl;
+        cout << "range 0" << " to " << difficult <<  endl;
         break;
         case 2: 
         mode = 100;
         difficult = mode;
-       cout << "range to 0" << difficult <<  endl;
+        cout << "range 0" << " to " << difficult <<  endl;
         break;
         case 3:
         mode = 1000; 
         difficult = mode;
-        cout << "range to 0" << difficult <<  endl;
+        cout << "range 0" << " to " << difficult <<  endl;
         break;
         default:
         cout << "ERROR - 404: invalid gamemode" <<  endl;
@@ -127,6 +127,4 @@ int main(void) {
   }
 } 
 
-void return_menu(){
-  main();
-}
+void return_menu(){ main(); }
