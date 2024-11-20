@@ -23,7 +23,7 @@ int main() {
 void add(){
   random_device dev;
   mt19937 rng(dev());
-  uniform_int_distribution<mt19937::result_type> dist6(1,10); // distribution in range [1, 6]
+  uniform_int_distribution<mt19937::result_type> dist6(1,10); 
   int valor = dist6(rng);
   int valor2 =  dist6(rng);
 
