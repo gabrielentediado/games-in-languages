@@ -74,38 +74,41 @@ class Operations {
         case 1:
         mode = 10; 
         difficult = mode;
-        cout << difficult;
+        cout << "range to 0" << difficult <<  endl;
         break;
         case 2: 
         mode = 100;
         difficult = mode;
-        cout << difficult;
+       cout << "range to 0" << difficult <<  endl;
         break;
         case 3:
         mode = 1000; 
         difficult = mode;
-        cout << difficult;
+        cout << "range to 0" << difficult <<  endl;
         break;
       }
     }
 };
 int main(void) {
   int mode, op; 
-  cout << "Choose the mode:" << endl << "1-easy "  <<  endl << "2-medium "  <<  endl << "3- hard";
+  cout << "Choose the mode:" << endl << "1-easy "  <<  endl << "2-medium "  <<  endl << "3- hard" <<  endl;
   cin >> mode;
   Operations op_Objt(mode);
 
-  cout << "Choose the operations:" << endl << "1-add "  <<  endl << "2-subtracion "  <<  endl << "3- division";
+  cout << "Choose the operations:" << endl << "1-add "  <<  endl << "2-subtracion "  <<  endl << "3- division" <<  endl << "4- multiplication" <<  endl;
   cin >> op;
   switch(op){
     case 1:
-
+    op_Objt.add();
     break; 
     case 2:
-
+    op_Objt.sub();
     break;
     case 3:
-
-    break;  
+    op_Objt.div();
+    break;
+    case 4:
+    op_Objt.mult();
+    break;    
   }
 } 
